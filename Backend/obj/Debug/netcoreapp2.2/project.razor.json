@@ -1870,6 +1870,12 @@
     "CSharpLanguageVersion": 703
   },
   "RootNamespace": "Backend",
-  "Documents": [],
+  "Documents": [
+    {
+      "FilePath": "d:\\repos\\Conference\\Backend\\Views\\Speaker\\PutSpeaker.cshtml",
+      "TargetPath": "Views\\Speaker\\PutSpeaker.cshtml",
+      "FileKind": "mvc"
+    }
+  ],
   "SerializationFormat": "0.2"
 }

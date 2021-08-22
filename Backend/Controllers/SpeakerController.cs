@@ -25,28 +25,30 @@ namespace Backend.Controllers
 
         //Get api/Speaker
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Speaker>>> GetSpeaker()
+        public async Task<ActionResult<List<ConferenceDTO.SpeakerResponse>>> GetSpeaker()
         {
             //return await _db.Speakers.ToListAsync();
 
-            var speakers = await _db.Speakers.AsNoTracking().Include(s => s.SessionSpeakers).ThenInclude(ss => ss.Session).ToListAsync();
+            var speakers = await _db.Speakers.AsNoTracking().Include(s => s.SessionSpeakers).ThenInclude(ss => ss.Session).Select(s => s.MapSpeakerResponse()).ToListAsync();
 
             return speakers;
         }
 
         // GET: api/Speakers/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<Speaker>> GetSpeaker(int id)
+        public async Task<ActionResult<ConferenceDTO.SpeakerResponse>> GetSpeaker(int id)
         {
-            var speaker = await _db.Speakers.FindAsync(id);
-
+            var speaker = await _db.Speakers.AsNoTracking()
+                                            .Include(s => s.SessionSpeakers)
+                                                .ThenInclude(ss => ss.Session)
+                                            .SingleOrDefaultAsync(s => s.ID == id);
             if (speaker == null)
             {
                 return NotFound();
             }
-
-            return speaker;
+            return speaker.MapSpeakerResponse();
         }
+
 
         // PUT: api/Speakers/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for
@@ -84,19 +86,29 @@ namespace Backend.Controllers
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for
         // more details see https://aka.ms/RazorPagesCRUD.
         [HttpPost]
-        public async Task<ActionResult<Speaker>> PostSpeaker(Speaker speaker)
+        public async Task<ActionResult<ConferenceDTO.SpeakerResponse>> PostSpeaker(ConferenceDTO.Speaker input)
         {
+            var speaker = new Speaker
+            {
+                Name = input.Name,
+                WebSite = input.WebSite,
+                Bio = input.Bio
+            };
             _db.Speakers.Add(speaker);
             await _db.SaveChangesAsync();
 
-            return CreatedAtAction("GetSpeaker", new { id = speaker.ID }, speaker);
+            var result = speaker.MapSpeakerResponse();
+
+
+
+            return CreatedAtAction(nameof(GetSpeaker), new { id = speaker.ID }, speaker);
         }
 
         // DELETE: api/Speakers/5
         [HttpDelete("{id}")]
-        public async Task<ActionResult<Speaker>> DeleteSpeaker(int id)
+        public async Task<ActionResult<ConferenceDTO.SpeakerResponse>> DeleteSpeaker(int id)
         {
-            var speaker = await _db.Speakers.FindAsync(id);
+            var speaker = await _db.FindAsync<Speaker>(id);
             if (speaker == null)
             {
                 return NotFound();
@@ -105,7 +117,7 @@ namespace Backend.Controllers
             _db.Speakers.Remove(speaker);
             await _db.SaveChangesAsync();
 
-            return speaker;
+            return speaker.MapSpeakerResponse();
         }
 
         private bool SpeakerExists(int id)
