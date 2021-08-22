@@ -1,0 +1,9 @@
+D:\repos\Conference\ConferenceDTO\bin\Debug\netstandard2.0\ConferenceDTO.deps.json
+D:\repos\Conference\ConferenceDTO\bin\Debug\netstandard2.0\ConferenceDTO.dll
+D:\repos\Conference\ConferenceDTO\bin\Debug\netstandard2.0\ConferenceDTO.pdb
+D:\repos\Conference\ConferenceDTO\obj\Debug\netstandard2.0\ConferenceDTO.csprojAssemblyReference.cache
+D:\repos\Conference\ConferenceDTO\obj\Debug\netstandard2.0\ConferenceDTO.csproj.CoreCompileInputs.cache
+D:\repos\Conference\ConferenceDTO\obj\Debug\netstandard2.0\ConferenceDTO.AssemblyInfoInputs.cache
+D:\repos\Conference\ConferenceDTO\obj\Debug\netstandard2.0\ConferenceDTO.AssemblyInfo.cs
+D:\repos\Conference\ConferenceDTO\obj\Debug\netstandard2.0\ConferenceDTO.dll
+D:\repos\Conference\ConferenceDTO\obj\Debug\netstandard2.0\ConferenceDTO.pdb

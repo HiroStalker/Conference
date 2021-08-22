@@ -1,0 +1,17 @@
+D:\repos\Conference\BackEnd\obj\Debug\netcoreapp2.2\BackEnd.csprojAssemblyReference.cache
+D:\repos\Conference\BackEnd\obj\Debug\netcoreapp2.2\BackEnd.csproj.CoreCompileInputs.cache
+D:\repos\Conference\BackEnd\obj\Debug\netcoreapp2.2\BackEnd.RazorAssemblyInfo.cache
+D:\repos\Conference\BackEnd\obj\Debug\netcoreapp2.2\BackEnd.RazorAssemblyInfo.cs
+D:\repos\Conference\BackEnd\obj\Debug\netcoreapp2.2\BackEnd.AssemblyInfoInputs.cache
+D:\repos\Conference\BackEnd\obj\Debug\netcoreapp2.2\BackEnd.AssemblyInfo.cs
+d:\repos\Conference\BackEnd\bin\Debug\netcoreapp2.2\BackEnd.deps.json
+d:\repos\Conference\BackEnd\bin\Debug\netcoreapp2.2\BackEnd.runtimeconfig.json
+d:\repos\Conference\BackEnd\bin\Debug\netcoreapp2.2\BackEnd.runtimeconfig.dev.json
+d:\repos\Conference\BackEnd\bin\Debug\netcoreapp2.2\BackEnd.dll
+d:\repos\Conference\BackEnd\bin\Debug\netcoreapp2.2\BackEnd.pdb
+d:\repos\Conference\BackEnd\obj\Debug\netcoreapp2.2\BackEnd.RazorTargetAssemblyInfo.cache
+d:\repos\Conference\BackEnd\obj\Debug\netcoreapp2.2\BackEnd.dll
+d:\repos\Conference\BackEnd\obj\Debug\netcoreapp2.2\BackEnd.pdb
+D:\repos\Conference\Backend\bin\Debug\netcoreapp2.2\ConferenceDTO.dll
+D:\repos\Conference\Backend\bin\Debug\netcoreapp2.2\ConferenceDTO.pdb
+D:\repos\Conference\Backend\obj\Debug\netcoreapp2.2\Backend.csproj.CopyComplete
